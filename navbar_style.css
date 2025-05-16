@@ -1,0 +1,37 @@
+/*Navigation Bar settings*/
+.menu-links {
+  margin-top: 30px;
+}
+
+.menu-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s;    
+}
+
+  /*Button Animation*/
+  nav a {
+    text-decoration: double;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.1s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background-color: rgb(238, 249, 119);
+    color:#337e7e;
+  }
+
+  nav a:active {
+    transform: scale(0.95);
+    background-color:rgb(8, 250, 230) ;
+  }

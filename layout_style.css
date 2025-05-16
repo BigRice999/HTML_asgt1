@@ -1,0 +1,271 @@
+/*Background and layout design*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background:  #0d4a4e;
+    color: #585656;
+    margin: 0;
+    padding: 0;
+  }
+
+  header{
+    background:#ff947b;
+    color: #553C60;
+    padding: 1rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff; 
+    border-radius: 10px;
+  }
+  
+  .profile-picture img {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .headline h1 {
+    text-align: center;
+    color: #25145b; 
+    margin-top: 10px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #009ea1; 
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+/*Layout design of My Profile*/
+.profile-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1;
+  }
+  
+  .profile-picture img {
+    width: 350px;
+    height: 350px;
+    border-radius: 70%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .section,
+  .experience,
+  .headline,
+  .skills,
+  .goals,
+  .unique {
+    background-color: rgb(205, 247, 242);
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 40px;
+    text-align: center;
+  }
+
+  .recommend {
+    background-color: rgb(255, 246, 234);
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 40px;
+    text-align: center;
+  }
+
+  h3 {
+    color: rgb(253, 121, 50);
+  }
+  
+  
+  ul {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  /*Hobbies column*/
+  .accordion {
+    background-color: #2baa93;
+    color: white;
+    cursor: pointer;
+    padding: 14px;
+    width: 60%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .accordion:hover {
+    background-color: #218c77;
+  }
+
+  .accordion {
+    background-color: rgb(254, 177, 135);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 14px;
+    width: 70%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .accordion.active,
+  .accordion:hover {
+    background-color: #94ffea;
+    color:#218c77;
+    ;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: #fffcf3;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 5px;
+  }
+  
+/*Recommendation slider*/
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  height: 180px;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-left: 5px solid #2baa93;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+blockquote span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2baa93;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+/*My lifestyle */
+.media-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.media-container img,
+.media-container video {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*connecct with me*/
+.social-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+

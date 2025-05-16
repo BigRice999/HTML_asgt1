@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Lifestyle</title>
+  <link rel="stylesheet" href="navbar_style.css">
+  <link rel="stylesheet" href="layout_style.css">
+
+</head>
+
+<body>
+<div class="container"> 
+  
+  <header> 
+    <nav>
+      <a href="eportfolio.html"><b>PROFILE</b></a>
+      <a href="mylifestyle.html"><b>MY LIFESTYLE</b></a>
+      <a href="mygalleries.html"><b>MY GALLERIES</b></a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Lifestyle</h1>
+    
+    <section>
+      <section>
+        <h2>Hobbies & Interests</h2>
+
+        <button class="accordion"> 
+          <strong>📚 Reading</strong> 
+        </button>
+        <div class="panel">
+          <p>Reading is one of my favorite ways to slow down and recharge my creativity. I enjoy reading a wide variety of books, especially those related to personal growth, technology, and creative storytelling. </p>
+          <p>But it’s not all serious reading! I also enjoy manga, recently, I’ve been captivated by </p> 
+            <p></p><em>Frieren: Beyond Journey’s End.</em>
+          <p>It’s not your typical action fantasy, the storyline starts at it is quietly explores what happens after the heroic journey ends.
+              What touched me most is the way it captures the passage of time and the loneliness that comes with 
+              outliving people you once journeyed with. Through subtle moments and gentle storytelling, it reminds me that even in a fantasy world, 
+              emotions like grief, memory, and quiet growth are beautifully human.</p>
+          
+          <div class="media-container">
+            <img src="media/frieren.jpg" alt="manga">
+          </div>  
+
+          <p>Reading helps me gain new perspectives and stay inspired in both design and life. 
+              During busy days, I often switch to podcasts or audiobooks to make use of small moments.</p>
+            <p>My recent podcast: </p>
+            <iframe style="border-radius:12px" 
+              src="https://open.spotify.com/embed/show/5qX1nRTaFsfWdmdj5JWO1G?utm_source=generator" 
+              width="100%" height="152" frameBorder="0" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+            </iframe>
+        
+        </div>
+      
+        <button class="accordion">
+          <strong>🎮 Gaming</strong>
+        </button>
+        <div class="panel">
+          <p>As a passionate gamer, I regularly follow trends and innovations in the gaming industry. I’m especially interested in game UI/UX design, story-rich indie games, and how interactive design enhances player experience.</p>
+          <p><strong>The Legend of Zelda: Breath of the Wild</strong> 
+            is one of my all-time favorite games, I believe that I am not alone!</p>
+
+          <p>Even years after its release, <em>Breath of the Wild</em> remains a masterpiece 
+            that continues to amaze both new and returning players. 
+            It’s not just about defeating enemies or completing quests, 
+            it’s about the freedom to explore, experiment, and get creative in a vast open world, Hyrule, that truly feels alive.</p>
+
+          <p>From a technical perspective, what fascinates me the most is how the game balances a physics-driven environment 
+            with player creativity. Almost everything you see or interact with follows real-world logic: 
+            wind can carry fire, metal conducts electricity, and even rolling objects can create chain reactions. 
+            These systems aren’t just visual gimmicks — they’re the foundation of gameplay. 
+            Players can solve puzzles in dozens of ways, often in ways the developers didn’t even plan. </p>
+
+          <p>Its seamless loading system, weather effects, and stamina-based climbing mechanics also 
+            inspired many newer open-world games. Yet even today, it still manage to replicate feeling of true freedom.
+            The game doesn't hold your hand makes it feel so rewarding. </p>
+
+          <p>I think part of its lasting appeal also comes from how players continue to discover new interactions, 
+            glitches, and fun mechanics years later. It’s a playground for experimentation!</p>
+
+          <p>Here's a fun video that shows just how crazy and creative the community can get:</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qsCK7KavCtw?si=E_f52IMSyRQqfixf" 
+          title="YouTube video player" 
+          frameborder="0" allow="accelerometer; 
+          autoplay; clipboard-write; 
+          encrypted-media; 
+          gyroscope; 
+          picture-in-picture; 
+          web-share" referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+        </div>
+      
+        <button class="accordion">
+          <strong>🚲 Cycling</strong>
+        </button>
+        <div class="panel">
+          <p>Cycling gives me a sense of speed and freedom, and I love exploring new places with the wind in my face.</p>
+          <p>Capturing the journey through photos and videos has become one of my favorite hobbies.</p>
+          
+          <section>
+            <p>Where do you go during holiday or free time?</p>
+            <form id="pollForm">
+              <input type="radio" name="activity" value="outdoor" /> Hang out with my homies of course<br />
+              <input type="radio" name="activity" value="indoor" /> Nah, I will stay at home<br />
+              <input type="radio" name="activity" value="touch-green" /> Go out to breath at nature<br />
+              <input type="radio" name="activity" value="family" /> Having time with family<br /><br />
+              <button type="button" onclick="submitPoll()">Vote</button>
+            </form>
+            <p id="pollResult"></p>
+          </section>
+
+          <script>
+            function submitPoll() {
+              const options = document.getElementsByName("activity");
+              let selected = "";
+              for (const option of options) {
+                if (option.checked) {
+                  selected = option.value;
+                }
+              }
+              if (selected) {
+                document.getElementById("pollResult").textContent =
+                  "You voted for: " + selected;
+              } else {
+                alert("Please select an activity before voting!");
+              }
+            }
+          </script>
+
+          <div class="media-container">
+            <img src="media/cycling1.jpg" alt="Cycling Photo">
+            <video controls src="media/13627419_1080_1920_30fps.mp4"></video>
+          </div>
+
+        </div>
+      
+        <button class="accordion"> 
+          <strong>🍳 Cooking</strong> 
+        </button>
+        <div class="panel">
+          <p>To stay healthy while managing my time and diet, I enjoy discovering quick and nutritious recipes. </p>
+          <p>I especially love “lazy but healthy” meals that are both satisfying and simple to make.
+            One of my favorite content creators shares recipes that truly match my taste.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JHI-6MSA0l4?si=ApcMzpwF3Y0yTaV0" title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; 
+            autoplay; clipboard-write; 
+            encrypted-media; gyroscope; 
+            picture-in-picture; 
+            web-share" referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <script>
+        function submitPoll() {
+          const options = document.getElementsByName("activity");
+          let selected = "";
+          for (const option of options) {
+            if (option.checked) {
+              selected = option.value;
+            }
+          }
+          if (selected) {
+            document.getElementById("pollResult").textContent =
+              "You voted for: " + selected;
+          } else {
+            alert("Please select an option!");
+          }
+        }
+      
+        // Accordion drawer logic
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Toggle active class for style
+            this.classList.toggle("active");
+      
+            // Get the next sibling (the drawer panel)
+            const panel = this.nextElementSibling;
+      
+            // If open, close it. If closed, open it.
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        });
+      </script>      
+      
+    </section>
+
+  </main>
+
+  <section class="social-links">
+    <h2>📲 Connect With Me 🥰</h2>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/372334298" target="_blank" title="LinkedIn">
+        <img src="media/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/BigRice999" target="_blank" title="GitHub">
+        <img src="media/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/tmie_911" target="_blank" title="tmie_911">
+        <img src="media/instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="navbar_style.css">
+  <link rel="stylesheet" href="layout_style.css">
+  <link rel="stylesheet" href="gallery_layout.css">
+
+</head>
+<body>
+  <div class="container"> 
+    <header> 
+      <nav>
+        <a href="eportfolio.html"><b>PROFILE</b></a>
+        <a href="mylifestyle.html"><b>MY LIFESTYLE</b></a>
+        <a href="mygalleries.html"><b>MY GALLERIES</b></a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>My Gallery</h1>
+      <div data-tockify-component="mini" data-tockify-calendar="tammie"></div>
+    <script data-cfasync="false" data-tockify-script="embed" 
+      src="https://public.tockify.com/browser/embed.js">
+    </script>
+      <div class="gallery">
+        <div class="gallery-item" data-message="I have design ticket for my club event's cafe!">
+          <img src="media/img1.jpg" alt="Photo 1">
+        </div>
+
+        <div class="gallery-item" data-message="Another picture on my cycling journey.">
+          <img src="media/flower1.jpg" alt="Photo 2">
+        </div>
+
+        <div class="gallery-item" data-message="I love this blue sky!">
+          <img src="media/flower2.jpg" alt="Photo 3">
+        </div>
+
+        <div class="gallery-item" data-message="Uni memory: my first PESKON at UUM">
+          <video src="media/peskon.mp4" alt="Video 1">
+        </div>
+
+        <div class="gallery-item" data-message="My favorite Japanese Song">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0Uhh62MUEic?si=0xMp2J-XaHazO-xF" 
+          title="YouTube video player" 
+          frameborder="0" allow="accelerometer; 
+          autoplay; clipboard-write; 
+          encrypted-media; gyroscope; 
+          picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+        </div>
+
+        <div class="gallery-item" data-message="Uni memory: Cat at my uni dorm!">
+          <video controls src="media/cat.mp4"></video>
+        </div>
+
+        <div class="gallery-item" data-message="Uni memory: first gym moment">
+          <video controls src="media/gym.mp4"></video>
+        </div>
+        
+        <div class="gallery-item" data-message="Best Chinese meal of this week!">
+          <img src="media/meal1.jpg" alt="Photo 4">
+        </div>
+
+        <div class="gallery-item" data-message="Gahhhh I miss this meal">
+          <img src="media/meal2.jpg" alt="Photo 5">
+        </div>
+
+        <div class="gallery-item" data-message="Ipoh trip: my friend's recommended coffee!">
+          <img src="media/coffee1.jpg" alt="Photo 6">
+        </div>
+
+        <div class="gallery-item" data-message="Enjoy me time moment on grasss">
+          <img src="media/gogreen.jpg" alt="Photo 7">
+        </div>
+
+        <div class="gallery-item" data-message="Uni memory: GOOD MORNINGG at 6am! ">
+          <img src="media/morning1.jpg" alt="Photo 8">
+        </div>
+
+        <div class="gallery-item" data-message="Uni memory: best sunset scene ever when I am walking">
+          <img src="media/sunset1.jpg" alt="Photo 9">
+        </div>
+
+        <div class="gallery-item" data-message="Uni memory: amazing sunset scene at DMAS bridge">
+          <img src="media/sunset2.jpg" alt="Photo 10">
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  
+<div id="mediaModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+  
+    <div class="media-wrapper">
+      <div id="mediaPreview"></div>
+    </div>
+  
+    <p id="mediaMessage">This is a sample media description.</p>
+    <div class="emoji-reactions">
+      <span onclick="react('👍')">👍</span>
+      <span onclick="react('❤️')">❤️</span>
+      <span onclick="react('😂')">😂</span>
+      <span onclick="react('😢')">😢</span>
+      <span onclick="react('😮')">😮</span>
+
+    </div>
+  
+    <div id="emoji-burst-container"></div>
+  </div>
+  
+</div>
+  
+  <script>
+    const modal = document.getElementById("mediaModal");
+    const mediaPreview = document.getElementById("mediaPreview");
+    const mediaMessage = document.getElementById("mediaMessage");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelector(".gallery").addEventListener("click", function (e) {
+      const clickedItem = e.target.closest(".gallery-item");
+      if (!clickedItem) return;
+
+      const media = clickedItem.querySelector("img, video, iframe");
+      if (!media) return;
+
+      const mediaClone = media.cloneNode(true);
+      if (mediaClone.tagName === "VIDEO") mediaClone.controls = true;
+
+      mediaPreview.innerHTML = "";
+      mediaPreview.appendChild(mediaClone);
+      mediaMessage.textContent = clickedItem.dataset.message || "No message set.";
+      modal.style.display = "block";
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = e => {
+      if (e.target == modal) modal.style.display = "none";
+    };
+
+    function react(emoji) {
+  const burst = document.createElement("div");
+  burst.classList.add("emoji-burst");
+  burst.textContent = emoji;
+
+  const container = document.getElementById("emoji-burst-container");
+  container.appendChild(burst);
+
+  burst.style.left = Math.random() * 80 + 10 + "%";
+  setTimeout(() => burst.remove(), 1000);
+}
+
+  </script>
+</body>
+</html>
